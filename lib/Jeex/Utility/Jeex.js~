@@ -35,6 +35,7 @@ exports.Configure = new Class({
 exports.App = new Class({
 	initialize: function(App, Root, Name) {
 
+
 		if(App !== undefined) {
 			this.APP = App;
 			this.APPNAME = path.basename(this.APP);
@@ -102,11 +103,10 @@ exports.App = new Class({
 		this.log(message, level);
 	},
 	access: function(Request, level) {
-		//TODO: Work a bit^^
 		//127.0.0.1 - - [22/Mar/2011:15:32:18 +0100] "GET /css/ccss/Packagesc131679d8b94a7f32ae5ac44f8b81361.css HTTP/1.1" 304
 		var ip = Request.connection.remoteAddress;
 		//date = Date.format('r');
-		var date = '';
+		
 		var method = Request.method;
 		var url = Request.url;
 		var protocol = 'HTTP/' + Request.httpVersion;
@@ -278,16 +278,8 @@ exports.Jeex = new Class({
 		this.DS = '/';
 		
 	},
-	registerExchange: function(options) {
-		options = Object.merge({
-			app: exports.CORE + 'exchangeApp',
-			name: 'exchangeApp'
-		}, options);
-		console.log(options);
-		return this.registerApp(options);
-	},
 	registerApp: function(options) {
-		options = Object.merge({
+		var options = Object.merge({
 			Extends: exports.Server
 		}, options);
 		var server = new Class(options);
