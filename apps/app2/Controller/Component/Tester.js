@@ -1,8 +1,10 @@
 
 module.exports = function(App, Jeex) {
 	App.load('MooTools').apply(this);
+	
 	return new Class({
-		Extends: App.Helper
+		Extends: Jeex.Component,
+		name: 'Tester'
 	});
 	
 };
