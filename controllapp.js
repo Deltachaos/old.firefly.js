@@ -10,6 +10,18 @@ JeexInstance.registerExchange({
 	}
 });
 
+
+JeexInstance.registerApp({
+	exchangeServer: 'localhost:8080',
+	name: 'app1',
+	debug: 2,
+	exchangeServer: '',
+	transports: {
+		Http: ['8086', '0.0.0.0', {}]
+	}
+});
+
+
 /*
 
 JeexInstance.registerApp({
