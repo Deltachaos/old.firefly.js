@@ -1,9 +1,9 @@
-var Jeex = require('./lib/Jeex/Jeex.js');
+var Firefly = require('./lib/FireflyJs/Firefly.js');
 
 
-var JeexInstance = new Jeex.Jeex();
+var FireflyInstance = new Firefly.Firefly();
 
-JeexInstance.registerExchange({
+FireflyInstance.registerExchange({
 	debug: 2,
 	transports: {
 		Http: ['8080', '0.0.0.0', {}]
@@ -11,7 +11,7 @@ JeexInstance.registerExchange({
 });
 
 
-JeexInstance.registerApp({
+FireflyInstance.registerApp({
 	exchangeServer: 'localhost:8080',
 	name: 'app1',
 	debug: 2,

@@ -1,8 +1,8 @@
 
-module.exports = function(App, Jeex) {
+module.exports = function(App, Firefly) {
 	App.load('MooTools').apply(this);
 	return new Class({
-		Extends: Jeex.ModelBehavior
+		Extends: Firefly.ModelBehavior
 	});
 	
 };
