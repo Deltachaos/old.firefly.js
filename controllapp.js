@@ -1,7 +1,14 @@
 var Firefly = require('./lib/FireflyJs/Firefly.js');
 
+var Core = new Firefly.App();
+var TestCase = Core.load('TestCase');
+var TestCaseInstance = new TestCase();
+
 
 var FireflyInstance = new Firefly.Firefly();
+
+
+/*
 
 FireflyInstance.registerExchange({
 	debug: 2,
@@ -21,7 +28,7 @@ FireflyInstance.registerApp({
 	}
 });
 
-
+*/
 /*
 
 JeexInstance.registerApp({
