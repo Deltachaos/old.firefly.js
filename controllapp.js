@@ -1,12 +1,19 @@
-var Firefly = require('./lib/FireflyJs/Firefly.js');
+var Firefly = require('./lib/FireflyJs/index.js');
 
 var Core = new Firefly.App();
 var TestCase = Core.load('TestCase');
 var TestCaseInstance = new TestCase();
-
+TestCaseInstance.getTestList(function(err, results) {
+	if(err === null) {
+		results.each(function(value) {
+			TestCaseInstance.runTest(value, function(err) {
+				console.log('abc');
+			});
+		});
+	}
+});
 
 var FireflyInstance = new Firefly.Firefly();
-
 
 /*
 
