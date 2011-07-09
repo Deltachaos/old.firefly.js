@@ -1,4 +1,0 @@
-#!/bin/bash
-#echo "$(dirname "$(readlink -e "$0")")"
-cd "$(dirname "$(readlink -e "$0")")"
-node controllapp.js $@
